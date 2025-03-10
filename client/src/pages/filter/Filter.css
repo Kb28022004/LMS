@@ -1,0 +1,38 @@
+.filterMainContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 85%;
+    row-gap: 5%;
+}
+.filterMainContainer-upperSide{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filterMainContainer-upperSide>select{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding-right: 30px; /* Arrow ko left margin dene ke liye */
+    appearance: none; /* Default arrow ko hatayega */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>')
+      no-repeat right 10px center; /* Custom arrow left me set karna */
+    background-size: 20px; /* Arrow ka size */    text-align: center;
+}
+.filterMainContainer-lowerSide{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.filterMainContainer-categoryList{
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+    
+}
+
+  .filterMainContainer-categoryList>label{
+font-size: 18px;
+  }

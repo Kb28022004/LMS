@@ -1,0 +1,93 @@
+.courseDetailsContainer{
+    width: 100vw;
+    height: 84vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-rows: 35% 65%;
+}
+.courseDetailsContainer .topContainer{
+    max-width: 100%;
+    height: 100%;
+    background-color: rgb(56, 55, 55);
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+   
+}
+.courseDetailsContainer .topContainer p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.courseDetailsContainer .topContainer>div{
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.courseDetailsContainer .downContainer{
+display: grid;
+grid-template-columns: 40% 40%;
+column-gap: 20%;
+padding: 40px;
+}
+.courseDetailsContainer .downContainer .leftSectionDetailsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.courseDetailsContainer .downContainer .leftSectionDetailsContainer .courseContentContainer{
+    width: 100%;
+    max-height: 100% ;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+.courseDetailsContainer .downContainer .leftSectionDetailsContainer .courseContentContainer>div{
+  
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow-y: auto;
+}
+.rightSectionDetailsContainer{
+    width: 100%;
+    max-height: 100% ;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+    padding: 15px;
+    display: grid;
+grid-template-rows: 65% 5% 0.5% 5% 20%;
+    gap:4%
+}
+.courseDetailsContainer .downContainer .rightSectionDetailsContainer>img{
+ width: 100%;
+ height: 57%;
+}
+.courseDetailsContainer .downContainer .rightSectionDetailsContainer>button{
+    width: 80%;
+    height: 60%;
+    border-radius: 8px;
+    background-color: rebeccapurple ;
+    color: white;
+    margin: 0 auto;
+
+    transition: all 0.5s ease;
+    border: none;
+   }
+   .courseDetailsContainer .downContainer .rightSectionDetailsContainer>button:hover{
+    transform: scale(0.8);
+   }
+   .continueCourseButton{
+    width: 100% ;
+    border-radius: 8px;
+    background-color: tomato !important ;
+    color: white !important;
+    margin: 0px auto !important;
+
+    transition: all 0.5s ease;
+    border: none;
+   }

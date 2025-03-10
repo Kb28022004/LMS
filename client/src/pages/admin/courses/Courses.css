@@ -1,0 +1,8 @@
+.adminCoursesContainer{
+    width: auto;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

@@ -1,0 +1,61 @@
+.editLecturesMainContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+
+}
+.editLecturesMainContainer>.editLectureSection-1{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.editLecturesMainContainer>.editLectureSection-1>.ArrowCircleLeftOutlinedIcon{
+    font-size: 35px;
+    color: rgb(122, 120, 120);
+    cursor: pointer;
+}
+.editLecturesMainContainer>.editLectureSection-2{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-1>p{
+color: rgb(114, 113, 113);
+}
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-2>button{
+    background-color: tomato;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-3,.editLectureSection-2-4{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-3>label,.editLectureSection-2-4>label{
+    font-size: 18px;
+font-weight: bold;
+
+}
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-3>input{
+    height: 35px;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+ 
+}
+
+.editLecturesMainContainer>.editLectureSection-2>.editLectureSection-2-6>button{
+    background-color: black;
+    text-transform: capitalize;
+    border-radius: 5px;
+}

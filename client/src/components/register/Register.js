@@ -1,0 +1,126 @@
+import React, { useEffect } from "react";
+import "./Register.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+import { useRegisterUserMutation } from "../../features/api/authApi";
+import { CircularProgress } from "@mui/material";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
+const Register = () => {
+  const [registerUser, { data, isError, isLoading, isSuccess, error }] =
+    useRegisterUserMutation();
+
+
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (values) => {
+    try {
+      await registerUser(values);
+    } catch (error) {
+      console.error("Registration Error:", error);
+    }
+  };
+
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(3, "Provide at least 3 characters")
+      .required("Please provide a name"),
+    email: Yup.string()
+      .email("Invalid email format")
+      .required("Email is required"),
+   
+    password: Yup.string()
+      .min(8, "Password must be at least 8 characters")
+      .required("Password is required"),
+    
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+
+      password: "",
+    },
+    validationSchema: validationSchema,
+    onSubmit: handleSubmit, // ✅ Corrected submission handler
+  });
+
+  useEffect(() => {
+    if (isSuccess && data) {
+      toast.success(data?.message || "Account created successfully");
+      navigate("/login");
+    }
+
+    if (isError && error) {
+      toast.error(error?.data?.message || "Registration failed!");
+    }
+  }, [isSuccess, isError, data, error, navigate]);
+
+  return (
+    <div className="homeContainer">
+      <div className="formContainer">
+        <h1>Register Form</h1>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="section-1">
+            <label htmlFor="name">Name</label>
+            <input
+              placeholder="Enter full name"
+              type="text"
+              name="name"
+              id="name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.name && formik.errors.name && (
+              <p className="error">{formik.errors.name}</p>
+            )}
+          </div>
+
+          <div className="section-1">
+            <label htmlFor="email">Email</label>
+            <input
+              placeholder="Enter valid email"
+              type="email"
+              name="email"
+              id="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <p className="error">{formik.errors.email}</p>
+            )}
+          </div>
+
+          <div className="section-1">
+            <label htmlFor="password">Password</label>
+            <input
+              placeholder="Enter password with at least 8 characters"
+              type="password" // ✅ Fixed type
+              name="password"
+              id="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.password && formik.errors.password && (
+              <p className="error">{formik.errors.password}</p>
+            )}
+          </div>
+
+          <div className="section-1">
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? <CircularProgress size={18} /> : "Submit"}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Register;

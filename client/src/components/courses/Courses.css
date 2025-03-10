@@ -1,0 +1,29 @@
+.courseContainer {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  max-width: 100%;
+
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+}
+.courseContainer > h1 {
+  text-align: center;
+}
+.courseList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.card {
+  width: 320px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 0 black;
+}

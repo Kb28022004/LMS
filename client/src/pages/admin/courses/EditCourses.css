@@ -1,0 +1,115 @@
+.editCourseContainer {
+  width: auto;
+  height: auto;
+  padding: 50px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.upperSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.upperSection >a> button {
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+  color: black;
+}
+.upperSection > a>button:hover {
+  text-decoration: underline;
+  color: blue;
+  transform: scale(1.1);
+}
+.lowerSection {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 0 black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightContent,.content-8 {
+  display: flex;
+  gap: 16px;
+}
+.rightContent > button,.content-8>button {
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+  border-radius: 12px;
+}
+.rightContent > button:hover,.content-8>button:hover {
+  transform: scale(1.1);
+}
+.content-2,
+.content-3,
+.content-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.content-2 > input,
+.content-3 > input {
+  width: 100%;
+  height: 35px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 0 8px 0 black;
+  padding: 10px;
+  font-size: 14px;
+}
+.content-2 > label,
+.content-3 > label,
+.content-4 > label {
+  font-size: 18px;
+  font-weight: 600;
+}
+.content-4 > textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+
+  border-radius: 15px;
+}
+.content-5 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+}
+.content-5 .content-5-1,
+.content-5-2,
+.content-5-3,.content-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.content-5 .content-5-1 > label,
+.content-5-2 > label,
+.content-5-3 > label ,.content-6>label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.content-5 .content-5-1 > select,
+.content-5-2 > select,
+.content-5-3 > input  {
+  width: 240px;
+  height: 35px;
+  padding: 8px;
+  border-radius: 15px;
+}
+.content-6>input{
+    width: 50%;
+    border: 1px solid black;
+    height: 35px;
+    padding: 8px;
+    border-radius: 15px;
+}

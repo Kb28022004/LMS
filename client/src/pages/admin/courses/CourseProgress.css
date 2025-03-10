@@ -1,0 +1,113 @@
+.courseProgressMainContainer{
+    width: 100vw;
+    height: 88vh;
+    max-width: 100%;
+    display: grid;
+    place-items: center;
+}
+.courseProgressContainer{
+    width: 90vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 50% 45%;
+    column-gap: 5%;
+    padding: 12px;
+    overflow: hidden;
+}
+.courseProgressContainer-leftSide{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 1px solid black;
+    padding: 15px;
+
+}
+.lectureImage-title,.courseProgressContainer-rightSide{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px 0 black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.lectureImage-title>h3{
+    text-align: center;
+}
+.courseProgressContainer-rightSide {
+    padding: 15px;
+    overflow-y: auto;
+
+}
+
+.courseProgressContainer-rightSide .courseProgresslecturesTittleNotCompleted{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 2px 0 black;
+    display: flex;
+    justify-content: flex-start;
+cursor: pointer;
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    gap: 15px;
+
+}
+.courseProgressContainer-rightSide-section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.courseProgressContainer-rightSide-section1>button{
+    border-radius: 12px;
+    background-color: rgb(74, 202, 74);
+    text-transform: capitalize;
+    color: white;
+    height: 40px;
+    width: 180px;
+    padding: 5px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.courseProgressContainer-rightSide-section1>button:hover{
+    transform: scale(1.1);
+}
+.courseProgresslecturesTittleCompleted{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 2px 0 black;
+    display: flex;
+    justify-content: flex-start;
+cursor: pointer;
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    gap: 75px;
+
+}
+.courseProgressContainer-rightSide-section1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.courseProgresslecturesTittleCompleted>div{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+
+.courseProgressLectureCompletedHighlight{
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 0 2px 0 black;
+display: flex;
+justify-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 12px;
+    align-items: center;
+    background-color: rgb(233, 232, 232);
+    gap: 75px;
+}

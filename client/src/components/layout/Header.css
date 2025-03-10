@@ -1,0 +1,32 @@
+#navbar {
+  position: fixed; /* ✅ Hamesha screen ke upar rahega */
+  top: 0;
+  left: 0;
+  width: 100%; /* ✅ Full width lega */
+  z-index: 1000; /* ✅ Sabse upar rahega */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px;
+  gap: 600px;
+  box-shadow: 0 0 15px 0 black;
+  background-color: #fff; /* ✅ Background diya taki transparent na ho */
+}
+
+#navbar .leftSection, 
+#navbar .rightSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#navbar .rightSection .section-4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Content ke liye margin-top diya taaki header content ko na cover kare */
+body {
+  padding-top: 70px; /* Header ke height ke barabar padding do */
+}
